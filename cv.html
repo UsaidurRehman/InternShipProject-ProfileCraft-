@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional CV — {{username}}</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .cv-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+  }
+  .left-column {
+    width: 35%;
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 30px 20px;
+  }
+  .left-column h2 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+  }
+  .left-column p {
+    margin: 8px 0;
+  }
+  .left-column h3 {
+    margin: 20px 0 10px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+  }
+  .right-column {
+    width: 65%;
+    padding: 30px 40px;
+  }
+  .section-title {
+    font-size: 20px;
+    color: #ff4500;
+    border-bottom: 2px solid #ff4500;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  .section {
+    margin-bottom: 25px;
+  }
+  .section p {
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  .work-experience, .education, .skills {
+    border-left: 3px solid #ff4500;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
+  .skills p {
+    display: inline-block;
+    background: #ff4500;
+    color: #fff;
+    padding: 4px 10px;
+    margin: 3px 3px 0 0;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="cv-container">
+  <!-- LEFT COLUMN -->
+  <div class="left-column">
+    <h2>{{username}}</h2>
+    <p><strong>Email:</strong> {{email}}</p>
+    <p><strong>Phone:</strong> {{phoneNumber}}</p>
+    <p><strong>Profile:</strong> <a href="{{profileLink}}" style="color:#fff;text-decoration:underline;">Link</a></p>
+    <p><strong>Location:</strong> {{location}}</p>
+    <p><strong>DOB:</strong> {{dob}}</p>
+
+    <h3>Career Objective</h3>
+    <p>{{careerObjective}}</p>
+
+    <h3>Skills</h3>
+    <div class="skills">
+      {{#each skills_technical}}<p>{{this}}</p>{{/each}}
+      {{#each skills_soft}}<p>{{this}}</p>{{/each}}
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="right-column">
+    <div class="section education">
+      <div class="section-title">Education</div>
+      <p><strong>Degree:</strong> {{education_degree}}</p>
+      <p><strong>Institution:</strong> {{education_institution}}</p>
+      <p><strong>Location:</strong> {{education_location}}</p>
+      <p><strong>Years:</strong> {{education_years}}</p>
+      <p><strong>CGPA:</strong> {{education_cgpa}}</p>
+    </div>
+
+    <div class="section work-experience">
+      <div class="section-title">Work Experience</div>
+      <p><strong>Job Title:</strong> {{work_jobTitle}}</p>
+      <p><strong>Company:</strong> {{work_companyName}}</p>
+      <p><strong>Location:</strong> {{work_location}}</p>
+      <p><strong>Years:</strong> {{work_years}}</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

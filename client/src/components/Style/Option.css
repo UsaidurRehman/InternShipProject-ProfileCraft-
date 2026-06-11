@@ -1,0 +1,117 @@
+.options-section {
+  width: 90%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin: 4.3rem auto 0 auto; 
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  height: 37.3rem;
+}
+
+.options-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.options-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: #1e5fd8;
+  letter-spacing: 0.5px;
+}
+
+.options-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  margin-top: -1rem;
+}
+
+/* Card */
+.option-card {
+  background: linear-gradient(145deg, #ffffff, #f4f6fc);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(79, 127, 255, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.option-card:hover::after {
+  opacity: 1;
+}
+
+.option-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  border-color: #4f7cff;
+  background: linear-gradient(145deg, #f0f4ff, #ffffff);
+}
+
+/* Icon */
+.option-icon {
+  font-size: 2.6rem;
+  margin-bottom: 14px;
+  color: #1e5fd8;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.option-card:hover .option-icon {
+  transform: scale(1.2);
+  color: #3b82f6;
+}
+
+/* Card Title */
+.option-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #111827;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.option-card:hover h3 {
+  color: #1e40af;
+}
+
+/* Description */
+.option-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.option-card:hover .option-description {
+  color: #333;
+}

@@ -1,0 +1,36 @@
+.failure-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffdddd;
+  color: #a94442;
+  padding: 12px 18px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.failure-icon {
+  font-size: 18px;
+}
+
+.failure-message {
+  flex: 1;
+}
+
+.failure-close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #a94442;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

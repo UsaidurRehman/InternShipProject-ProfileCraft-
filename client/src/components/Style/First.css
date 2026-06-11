@@ -1,0 +1,17 @@
+/* First.css */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+#main-content {
+  flex: 1;
+  padding: 20px;
+  min-width: 150vh;
+  margin-left: 15rem;
+  max-height: 100rem;
+}
+
+.firstSection {
+  width: 250px; 
+}

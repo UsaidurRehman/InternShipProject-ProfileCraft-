@@ -1,0 +1,208 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.cv-list-container {
+  margin-top: 5rem;
+  width: 70rem;
+  margin-left: 4rem;
+  min-height: 80vh;
+  position: relative; /* for notifications inside */
+}
+
+/* CV List Box */
+.cv-list {
+  width: 100%;
+  height: 100%;
+  padding: 30px 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25),
+              -2px -2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.cv-list h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+/* Table */
+.template-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+
+.template-table th,
+.template-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.template-table th {
+  background-color: #1e5fd8;
+  color: white;
+  font-weight: 600;
+}
+
+.template-table tr:nth-child(even) {
+  background-color: #f4f6f9;
+}
+
+.template-table tr:hover {
+  background-color: #dbe7ff;
+  cursor: pointer;
+}
+
+/* ✅ Icon Actions */
+.actions-cell {
+  text-align: right;
+}
+
+.actions-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.download-icon {
+  color: #4caf50;
+}
+
+.download-icon:hover {
+  color: #45a049;
+}
+
+.download-icon.disabled {
+  color: #a5d6a7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.delete-icon {
+  color: #f44336;
+}
+
+.delete-icon:hover {
+  color: darkred;
+}
+
+/* Notifications below table */
+.notifications-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.success-notification,
+.failure-notification {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.success-notification {
+  background-color: #4caf50;
+}
+
+.failure-notification {
+  background-color: #f44336;
+}
+
+/* No CVs message */
+.cv-list p {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cv-list-container {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+  .cv-list {
+    padding: 20px;
+  }
+
+  .cv-list h2 {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+
+  .template-table {
+    width: 100%;
+  }
+
+  .actions-icons {
+    gap: 0.75rem;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}
+/* Filter Section */
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.filter-section label {
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-section select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-section select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.3);
+}
+
+.filter-section select:hover {
+  border-color: #4f46e5;
+}
+

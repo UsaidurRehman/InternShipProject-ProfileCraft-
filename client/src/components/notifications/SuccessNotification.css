@@ -1,0 +1,28 @@
+.success-notification {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  background-color: #4BB543; /* green success color */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  z-index: 5000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.success-notification .close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}

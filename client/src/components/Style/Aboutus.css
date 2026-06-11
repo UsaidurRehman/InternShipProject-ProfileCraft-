@@ -1,0 +1,158 @@
+/* ---------- Base Colors & Theme ---------- */
+:root {
+  --gradient-bg: linear-gradient(135deg, #e8f0ff, #f8fbff);
+  --primary: #0a58ca;
+  --primary-dark: #06409b;
+  --text-dark: #1f2a44;
+  --text-light: #555;
+  --card-bg: #fff;
+  --shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  --radius: 14px;
+}
+
+/* ---------- Layout ---------- */
+.about {
+  background: var(--gradient-bg);
+  min-height: 100vh;
+  color: var(--text-dark);
+  padding-bottom: 40px;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* ---------- Hero Section ---------- */
+.about__hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.about__title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.about__subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---------- Card Styling ---------- */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.about__content {
+  display: grid;
+  gap: 28px;
+  margin-top: 40px;
+}
+
+/* ---------- Titles ---------- */
+.highlight-title {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---------- Features Grid ---------- */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.feature {
+  background: #f9fbff;
+  border: 1px solid #dce6ff;
+  text-align: center;
+  padding: 24px;
+}
+
+.feature__icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  background: #eaf2ff;
+  border-radius: 12px;
+  color: var(--primary);
+}
+
+.feature h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+
+.feature p {
+  color: var(--text-light);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* ---------- CTA ---------- */
+.about__cta {
+  text-align: center;
+}
+
+.about__cta p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  color: var(--text-light);
+}
+
+/* ---------- Button ---------- */
+.btn {
+  padding: 14px 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(10, 88, 202, 0.4);
+}
+
+.btn--primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ---------- Footer Info ---------- */
+.about__info {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+.about__info strong {
+  color: var(--primary);
+}

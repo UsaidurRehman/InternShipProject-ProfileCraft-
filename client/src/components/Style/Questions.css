@@ -1,0 +1,91 @@
+body
+{
+    margin-top: 10px;
+}
+
+#ques {
+  padding: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#ques h1 {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+#ques ol {
+  padding-left: 20px;
+}
+
+#ques ol > li {
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-left: 5px solid #4CAF50;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#ques ol > li:hover {
+  background: #f1fff1;
+  transform: translateX(5px);
+}
+
+#ques strong {
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+#ques ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+#ques ul li {
+  list-style-type: disc;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+#ques ul li::marker {
+  color: #4CAF50;
+}
+
+.submit-btn {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #2e7d32;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px; /* Vertically center text */
+  transition: transform 0.2s ease; /* smooth hover */
+}
+
+.submit-btn:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #ques {
+    padding: 15px;
+  }
+  #ques h1 {
+    font-size: 22px;
+  }
+}
